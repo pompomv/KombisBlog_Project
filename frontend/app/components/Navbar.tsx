@@ -82,12 +82,6 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/about" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              About the Authors
-            </Link>
-            
-            <div className="border-l border-gray-200 dark:border-gray-700 h-6 mx-2"></div>
-            
             <ThemeToggle />
           </div>
           
