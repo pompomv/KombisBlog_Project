@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
 // Fungsi untuk mengambil data dari API Laravel
 async function getPosts() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';

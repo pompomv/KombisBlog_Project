@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 async function getPost(slug: string) {
@@ -69,7 +68,7 @@ export default async function ArticleDetail({
   const category = CATEGORY_LABEL[slug] ?? 'Business Communication';
 
   // Suggest up to 3 other posts
-  const related = (Array.isArray(allPosts) ? allPosts : allPosts?.data ?? [])
+  const related = allPosts
     .filter((p: any) => p.slug !== slug)
     .slice(0, 3);
 

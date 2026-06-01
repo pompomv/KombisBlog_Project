@@ -35,8 +35,9 @@ RUN touch database/database.sqlite \
     && php artisan migrate --force \
     && php artisan db:seed --force
 
-# Expose port
-EXPOSE 10000
+# Railway will inject the PORT environment variable
+ENV PORT=8000
+EXPOSE ${PORT}
 
-# Start the application
-CMD php artisan serve --host=0.0.0.0 --port=10000
+# Start the application using the injected PORT
+CMD php artisan serve --host=0.0.0.0 --port=${PORT}
