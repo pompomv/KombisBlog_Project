@@ -193,6 +193,104 @@ export default async function Home() {
         </div>
       </div>
 
+      {/* ── COMMON MISTAKES & BEST PRACTICES ────────────────────── */}
+      <div className="bg-white dark:bg-slate-900 py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 border-t border-gray-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">
+              Dos and Don'ts
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-950 dark:text-white mb-6 leading-tight transition-colors duration-300">
+              Communication Pitfalls & Best Practices
+            </h2>
+            <p className="text-gray-600 dark:text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed transition-colors duration-300">
+              Avoid common traps and adopt proven strategies to make your business communication more effective and professional.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            
+            {/* Common Mistakes */}
+            <div className="bg-red-50/50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center text-red-600 dark:text-red-400">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+                  Common Mistakes
+                </h3>
+              </div>
+              
+              <ul className="space-y-5">
+                {[
+                  { title: 'Uninformative email subject lines', desc: 'Subjects such as "Info" or "Hello" do not help recipients understand the priority of the message.' },
+                  { title: 'Overly long and wordy language', desc: 'One long paragraph often hides the main point.' },
+                  { title: 'No clear follow-up', desc: 'Recipients do not know what to do after reading the message.' },
+                  { title: 'Choosing the wrong medium', desc: 'Using email for information that should be issued as an official memo, or vice versa.' },
+                  { title: 'Not checking spelling and grammar', desc: 'Small mistakes can damage a professional impression.' },
+                  { title: 'Meeting minutes are not distributed on time', desc: 'Meeting decisions that are not recorded promptly risk being forgotten or misunderstood.' },
+                  { title: 'Ignoring supporting data', desc: 'Claims without data are easy to dispute and difficult to justify.' }
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4 group">
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-red-200 dark:bg-red-900/40 flex items-center justify-center text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <div>
+                      <strong className="text-gray-900 dark:text-white font-semibold transition-colors duration-300">{item.title}: </strong>
+                      <span className="text-gray-600 dark:text-slate-400 transition-colors duration-300">{item.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Best Practices */}
+            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/30 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+                  Best Practices
+                </h3>
+              </div>
+              
+              <ul className="space-y-4">
+                {[
+                  'Define the purpose of the message before writing',
+                  'Choose the appropriate document type based on context and audience',
+                  'Use active sentences and get straight to the point',
+                  'Include relevant data or facts to support the message',
+                  'Review before sending or printing the document',
+                  'Keep copies of all important communications',
+                  'Distribute meeting minutes no later than 24 hours after the meeting ends',
+                  'Use consistent formats and templates across the organization',
+                  'Avoid discriminatory or insensitive language',
+                  'Update knowledge of digital communication ethics regularly'
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4 group items-start">
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-emerald-200 dark:bg-emerald-900/40 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700 dark:text-slate-300 transition-colors duration-300">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
 
       {/* ── WAVE: white → slate-900 ────────────────────────────── */}
