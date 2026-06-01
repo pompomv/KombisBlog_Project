@@ -15,6 +15,7 @@ const articles = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -85,9 +86,57 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
           
-          {/* Mobile menu button might be needed here later, but not part of current changes */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center gap-4">
             <ThemeToggle />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none p-2 rounded-md"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'opacity-100 max-h-screen py-4 shadow-xl' : 'opacity-0 max-h-0 py-0 overflow-hidden border-none'
+        }`}
+      >
+        <div className="px-4 space-y-2">
+          <Link
+            href="/"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-md transition-colors"
+          >
+            Home
+          </Link>
+          
+          <div className="pt-2 pb-1">
+            <div className="px-3 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">
+              Core Curriculum
+            </div>
+            <div className="space-y-1">
+              {articles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/artikel/${article.slug}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-md transition-colors pl-6"
+                >
+                  {article.title}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

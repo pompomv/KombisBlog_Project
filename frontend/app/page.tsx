@@ -50,9 +50,8 @@ export default async function Home() {
           </p>
         </div>
         {/* Wave into dark section */}
-        <div className="w-full bg-white dark:bg-slate-900 overflow-hidden leading-none transition-colors duration-300">
-          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block" style={{height:'80px'}}>
-            <rect width="1440" height="80" className="fill-white dark:fill-slate-900 transition-colors duration-300"/>
+        <div className="w-full bg-white dark:bg-slate-900 overflow-hidden leading-none transition-colors duration-300 -my-1 relative z-10">
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block scale-105" style={{height:'80px'}}>
             <path d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z" className="fill-slate-900 dark:fill-white transition-colors duration-300" />
           </svg>
         </div>
@@ -138,9 +137,8 @@ export default async function Home() {
           </div>
         </div>
         {/* Wave out of dark section */}
-        <div className="w-full bg-white dark:bg-slate-900 overflow-hidden leading-none transition-colors duration-300">
-          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block" style={{height:'80px'}}>
-            <rect width="1440" height="80" className="fill-white dark:fill-slate-900 transition-colors duration-300"/>
+        <div className="w-full bg-white dark:bg-slate-900 overflow-hidden leading-none transition-colors duration-300 -my-1 relative z-10">
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block scale-105" style={{height:'80px'}}>
             <path d="M0,80 C360,0 1080,0 1440,80 L1440,0 L0,0 Z" className="fill-slate-900 dark:fill-white transition-colors duration-300" />
           </svg>
         </div>
@@ -196,8 +194,8 @@ export default async function Home() {
       </div>
 
       {/* ── WAVE: white → slate-900 ────────────────────────────── */}
-      <div className="bg-slate-900 dark:bg-white overflow-hidden leading-none transition-colors duration-300">
-        <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block" style={{ height: '72px' }}>
+      <div className="bg-slate-900 dark:bg-white overflow-hidden leading-none transition-colors duration-300 -my-1 relative z-10">
+        <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block scale-105" style={{ height: '72px' }}>
           <path
             d="M0,36 C180,0 360,72 540,36 C720,0 900,72 1080,36 C1260,0 1380,54 1440,36 L1440,0 L0,0 Z"
             className="fill-white dark:fill-slate-900 transition-colors duration-300"
