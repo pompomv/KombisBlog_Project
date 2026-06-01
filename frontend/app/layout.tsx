@@ -49,7 +49,7 @@ export default function RootLayout({
           <footer className="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 mt-auto transition-colors duration-300">
             <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} KombisBlog. Written with Next.js & Tailwind.
+                &copy; {new Date().getFullYear()} KombisBlog. Written with Next.js & Laravel.
               </p>
               <div className="flex space-x-6">
                 <a href="https://github.com/pompomv/KombisBlog_Project" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors">
