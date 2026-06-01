@@ -3,8 +3,9 @@ import Image from 'next/image';
 
 // Fungsi untuk mengambil data dari API Laravel
 async function getPosts() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   // Melakukan request ke endpoint API Laravel
-  const res = await fetch('http://localhost:8000/api/posts', {
+  const res = await fetch(`${API_URL}/api/posts`, {
     // Memastikan Next.js selalu mengambil data terbaru (tidak di-cache terlalu lama)
     cache: 'no-store'
   });

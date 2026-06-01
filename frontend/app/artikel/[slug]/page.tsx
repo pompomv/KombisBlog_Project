@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 async function getPost(slug: string) {
-  const res = await fetch(`http://localhost:8000/api/posts/${slug}`, {
+  const res = await fetch(`${API_URL}/api/posts/${slug}`, {
     cache: 'no-store',
   });
   if (!res.ok) return null;
@@ -11,7 +13,7 @@ async function getPost(slug: string) {
 }
 
 async function getAllPosts() {
-  const res = await fetch('http://localhost:8000/api/posts', {
+  const res = await fetch(`${API_URL}/api/posts`, {
     cache: 'no-store',
   });
   if (!res.ok) return [];
