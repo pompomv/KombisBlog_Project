@@ -28,23 +28,23 @@ function readingTime(html: string): number {
 
 // Map slug → accent color pair [from, to] for hero gradient
 const SLUG_COLORS: Record<string, [string, string]> = {
-  'email-communication':                  ['#2563eb', '#4f46e5'],
-  'effective-business-writing':           ['#0891b2', '#2563eb'],
-  'memo':                                 ['#7c3aed', '#4f46e5'],
-  'business-letter':                      ['#059669', '#2563eb'],
-  'minutes-of-meeting':                   ['#d97706', '#dc2626'],
-  'importance-of-data':                   ['#db2777', '#7c3aed'],
-  'faq':                                  ['#0d9488', '#0891b2'],
+  'email-communication': ['#2563eb', '#4f46e5'],
+  'effective-business-writing': ['#0891b2', '#2563eb'],
+  'memo': ['#7c3aed', '#4f46e5'],
+  'business-letter': ['#059669', '#2563eb'],
+  'minutes-of-meeting': ['#d97706', '#dc2626'],
+  'importance-of-data': ['#db2777', '#7c3aed'],
+  'faq': ['#0d9488', '#0891b2'],
 };
 
 const CATEGORY_LABEL: Record<string, string> = {
-  'email-communication':                  'Digital Communication',
-  'effective-business-writing':           'Writing Skills',
-  'memo':                                 'Internal Communication',
-  'business-letter':                      'External Communication',
-  'minutes-of-meeting':                   'Documentation',
-  'importance-of-data':                   'Data & Analytics',
-  'faq':                                  'FAQ',
+  'email-communication': 'Digital Communication',
+  'effective-business-writing': 'Writing Skills',
+  'memo': 'Internal Communication',
+  'business-letter': 'External Communication',
+  'minutes-of-meeting': 'Documentation',
+  'importance-of-data': 'Data & Analytics',
+  'faq': 'FAQ',
 };
 
 export default async function ArticleDetail({
@@ -89,7 +89,7 @@ export default async function ArticleDetail({
           <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                <path d="M 32 0 L 0 0 0 32" fill="none" stroke="white" strokeWidth="0.5"/>
+                <path d="M 32 0 L 0 0 0 32" fill="none" stroke="white" strokeWidth="0.5" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
@@ -165,7 +165,7 @@ export default async function ArticleDetail({
         {/* Description / lead */}
         {article.description && (
           <p className="text-xl text-gray-500 dark:text-slate-400 leading-relaxed mb-10 font-light border-l-4 pl-5 py-1 transition-colors duration-300"
-             style={{ borderColor: gradFrom }}>
+            style={{ borderColor: gradFrom }}>
             {article.description}
           </p>
         )}

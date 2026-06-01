@@ -42,6 +42,9 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               Home
             </Link>
+            <Link href="/authors" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Authors
+            </Link>
 
             {/* Core Curriculum dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -119,6 +122,13 @@ export default function Navbar() {
             className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-md transition-colors"
           >
             Home
+          </Link>
+          <Link
+            href="/authors"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-md transition-colors"
+          >
+            Authors
           </Link>
           
           <div className="pt-2 pb-1">
