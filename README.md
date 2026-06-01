@@ -111,6 +111,7 @@ This project was created by students of **CCIT FTUI** in partnership with **Jaka
 | Member 1 | Lead Writer & Email Communication | Email, Business Etiquette, Digital Tools |
 | Member 2 | Content Lead & Documentation Specialist | Business Letters, Meeting Minutes, Formal Writing |
 | Member 3 | Research Lead & Data Communication | Data in Communication, Effective Writing, Research |
+| Member 4 | Research Lead & Data Communication | Data in Communication, Effective Writing, Research |
 
 ---
 
