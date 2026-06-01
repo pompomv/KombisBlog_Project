@@ -190,7 +190,8 @@ body {
 }
 
 .article-content div.bg-blue-50 .font-bold,
-.article-content div.bg-blue-50 .font-semibold {
+.article-content div.bg-blue-50 .font-semibold,
+.article-content div.bg-blue-50 strong {
   color: #111827;
 }
 
@@ -211,6 +212,39 @@ body {
   border-left-color: #fca5a5;
   color: #6b7280;
   font-style: italic;
+}
+
+/* Dark mode for Practical Example */
+.dark .article-content div.bg-blue-50 {
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+  border-color: #1e40af;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark .article-content div.bg-blue-50::before {
+  color: #60a5fa;
+  border-bottom-color: #1e40af;
+}
+
+.dark .article-content div.bg-blue-50 p {
+  color: #d1d5db;
+}
+
+.dark .article-content div.bg-blue-50 .font-bold,
+.dark .article-content div.bg-blue-50 .font-semibold,
+.dark .article-content div.bg-blue-50 strong {
+  color: #f3f4f6;
+}
+
+.dark .article-content div.bg-blue-50 blockquote {
+  background: #172554;
+  border-left-color: #3b82f6;
+  color: #bfdbfe;
+}
+
+.dark .article-content div.bg-blue-50 blockquote.border-red-300 {
+  border-left-color: #ef4444;
+  color: #9ca3af;
 }
 
 /* Grid layout for memo/minutes headers */
